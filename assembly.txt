@@ -1,0 +1,37 @@
+Caller saved registers: 
+    - Caller must save these registers and restore them 
+    - e.g. 
+        void foo() 
+        { 
+            # save r4
+            goo();
+            # restore r4
+        } 
+
+        void goo()
+        {
+            # use r4 here without worrying. 
+        } 
+
+    - Callee (goo()) is free to use them. foo() Caller's responsibility. 
+
+
+What are callee save registers? 
+    - Callee must save/restore these registers when it uses them 
+    – Caller expects callee to not change them
+    
+    e.g. 
+    void foo() 
+    { 
+        # assign rx here. 
+        goo()
+    } 
+
+    void goo() 
+    { 
+        # save rx here. 
+        # use rx 
+        # restore rx for foo()
+    } 
+
+
