@@ -17,3 +17,9 @@
 - What is the role of the loader? 
     * The loaders role is to simply group the sections created by the linker and copy these segments
       to the process memory map 
+    * Loader sets up all the memory structures which hold the mapping information for the different segments. (vm_area_struct) 
+    * The actual copying of segments from the executable happens after the program execution starts. By that time the virtual memory mapping between the page of physical memory granted to the process and the program memory map has been established; the first paging requests start arriving from the kernel requesting that page-wide ranges of program segments be available for execution. As a direct consequence of such policy, only the parts of the program that are actually needed at runtime happen to get loaded 
+
+
+ 
+    
