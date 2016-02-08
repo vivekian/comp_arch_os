@@ -1,0 +1,19 @@
+- How does the shell launch a process? 
+    * Look internally for shell commands to execute. 
+    * If not found then search for binaries in the PATH variable 
+    * Once the binary is found with the entire path, then load and execute the binary. 
+
+- Creation of a new process 
+    * Shell process clones itself and copies itself in memory.
+    * This allows the env variables to be inherited by the new process. 
+    * Kernel zeroes out the memory map (except for the env variables) 
+    * Next, loader fills in the details of the process from the binary file. 
+
+- What is the role of the kernel? 
+    * Kernel executes exec family of functions to launch the process
+        - sys_execve() does this. 
+        - next, binary format is idenetified (load_elf_binary() is called) 
+
+- What is the role of the loader? 
+    * The loaders role is to simply group the sections created by the linker and copy these segments
+      to the process memory map 
