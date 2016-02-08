@@ -1,0 +1,2 @@
+A static build is one where there is no linking to external libraries. even libc is part of the final binary image. Ofcourse this means that the executable size of the binary is much larger in terms of bytesize. 
+
