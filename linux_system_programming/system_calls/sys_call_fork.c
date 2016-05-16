@@ -18,15 +18,22 @@
 //
 
 int main() 
-{ 
+{
+    int istack = 22; 
+
     pid_t pid = fork();
    
-    if (pid == 0) 
+    if (pid == 0) { 
+        istack *= 3; 
         printf("child process\n"); 
+    }
     else if (pid == -1) 
         printf("error\n"); 
-    else 
+    else { 
         printf("parent process\n"); 
+    } 
+
+    printf("%u\n", istack); 
 
     return 0; 
 } 
