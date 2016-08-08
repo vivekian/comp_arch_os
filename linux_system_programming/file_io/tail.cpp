@@ -13,7 +13,7 @@ using std::string;
 using std::vector; 
 using namespace std; 
 
-int tail(const char *filepath, uint32_t lines) 
+int naive_tail(const char *filepath, uint32_t lines) 
 { 
     struct stat buf; 
 
@@ -56,7 +56,7 @@ int main(int argc, char** argv)
        return 1; 
     } 
 
-    return tail(argv[1], atoi(argv[2])); 
+    return naive_tail(argv[1], atoi(argv[2])); 
 }
 
 
