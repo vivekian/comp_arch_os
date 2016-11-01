@@ -1,0 +1,4 @@
+- Whenever a context switch occurs, the CPU state of the thread is saved and swapped out.
+  The next thread's CPU state is now reinstated. 
+
+
