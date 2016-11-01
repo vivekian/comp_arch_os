@@ -1,4 +1,9 @@
 - Whenever a context switch occurs, the CPU state of the thread is saved and swapped out.
   The next thread's CPU state is now reinstated. 
 
+- Whenever a shared value is written to, that code section acts as a critical section. 
+  Depeneding on when the thread context switch occurs, the value can be overwritten by 
+  a thread. 
+
+
 
