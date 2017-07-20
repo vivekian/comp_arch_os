@@ -13,6 +13,20 @@ using std::string;
 using std::vector; 
 using namespace std; 
 
+int smart_tail(const char *filepath, uint32_t lines) 
+{ 
+    struct stat buf; 
+
+    if (stat(filepath, &buf) == -1) { 
+        cerr << "error: " << strerror(errno) << endl; 
+        return -1; 
+    }
+
+    // count the total number of bytes 
+    // find lines+1 new lines and store the position offsets in an array 
+    // print out the strings 
+
+} 
 int naive_tail(const char *filepath, uint32_t lines) 
 { 
     struct stat buf; 
