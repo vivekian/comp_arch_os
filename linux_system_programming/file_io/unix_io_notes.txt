@@ -21,3 +21,11 @@ Reading and Writing:
 - There are always 3 open streams which have file descriptors associated with them, STDIN_FILENO, STDOUT_FILENO, STDERR_FILENO (standard error device). these file descriptors are maintained in the file desriptor table which is associated with any process. 
 
 - a common mistake is not to allocate enough memory for buff when doing the read call. 
+
+- ssize_t write(int fileds, const void* buff, size_t bytes); 
+    
+    fileds - file descriptor 
+    buff - buffer 
+    bytes - number of bytes to be written. 
+
+
