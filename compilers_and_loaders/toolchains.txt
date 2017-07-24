@@ -1,0 +1,15 @@
+toolchains: a set of tools which compile source code into executable that run on target. they comprise of compiler, linker and run-time libraries. they are required to compile kernel, bootloader androot filesystem for your target system. 
+
+binutils: a set of binary utilities which includes the assembler and linker. 
+
+GCC: a collection of compilers for C/C++ and other languages which create assembler code which is fed to the GNU assembler. 
+
+C library: standardized C API based on posix spec - primary interface to operating system kernel. 
+
+cross toolchains: The target for this compiler will be different from the host where compilation takes place. This is required since the target CPU is not powerful enough to do the compilation. 
+
+toolchain target: this is based on the arch of the CPU: (armv7, aarch64, MIPS, x86_64), big_endian/little_endian/ floating point support, ABI). some CPU's don't have FP support natively in the hardware. 
+
+C standard library: allmost all application calls eventually make their way via C library to the kernel when kernel services are required (even programs written in Python, Java etc). Its possible to call into the kernel calls directly, but not worth it, because C library provides abstraction and a much better interface. 
+
+
