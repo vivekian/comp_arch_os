@@ -12,4 +12,31 @@ toolchain target: this is based on the arch of the CPU: (armv7, aarch64, MIPS, x
 
 C standard library: allmost all application calls eventually make their way via C library to the kernel when kernel services are required (even programs written in Python, Java etc). Its possible to call into the kernel calls directly, but not worth it, because C library provides abstraction and a much better interface. 
 
+sysroot: the root directory which contains subdirectories for libraries, header files, and other configuration files. 
+    lib: shared libraries for C and dynamic linker/loader ld-linux
+    usr/lib: static libraries for C. 
+    usr/include: header files for C libraries.
+    usr/bin: utility programs that run on target 
+    usr/share: used for localization and internationalization. 
+    sbin: ldconfig to configure library paths. 
 
+gcc tools: 
+	ar    The archive utility is used to create static libraries.
+	as    This is the GNU assembler.
+	c++filt    This is used to demangle C++ and Java symbols.
+	cpp    This is the C preprocessor and is used to expand #define, #include, and other similar directives. You seldom need to use this by itself.
+	elfedit    This is used to update the ELF header of the ELF files.
+	g++    This is the GNU C++ frontend, which assumes that source files contain C++ code.
+	gcc    This is the GNU C frontend, which assumes that source files contain C code.
+	gcov    This is a code coverage tool.
+	gdb    This is the GNU debugger.
+	gprof    This is a program profiling tool.
+	ld    This is the GNU linker.
+	nm    This lists symbols from object files.
+	objcopy    This is used to copy and translate object files.
+	objdump    This is used to display information from object files.
+	ranlib    This creates or modifies an index in a static library, making the linking stage faster.
+	readelf    This displays information about files in ELF object format.
+	size    This lists section sizes and the total size.
+	strings    This displays strings of printable characters in files.
+	strip    This is used to strip an object file of debug symbol tables, thus making it smaller. Typically, you would strip all the executable code that is put onto the target.
