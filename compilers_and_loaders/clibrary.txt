@@ -1,0 +1,9 @@
+C library has 4 components: 
+    libc: primary component, to open, close, read/write files, printf etc. 
+    libm: math functions 
+    libpthread: pthread related functionality
+    librt: real time extensions to POSIX - shared memory and asynchronous I/O. 
+
+libc is linked by default, but others need to be linked by -lxxx. 
+
+
