@@ -1,0 +1,14 @@
+ARM architecture has 3 types of processors: 
+    - Application processors - these are with virtual memory support and can run complete applications. e.g. A57
+    - Real time - monolithic kernel and application. memory protection is there but no memory mapping. e.g. Cortex-R5
+    - Microcontroller - very small, thumb instruction support only, no external DRAM interface e.g. Cortex-M4. 
+
+ARM Markets (everywhere): 
+    - Mobile devices (phones, tablets) 
+    - Automotive - replacing less powerful CPUs (Fujitsu, Freescale etc). 
+                 - competition with Intel. 
+    - Networking hardware: MIPS and PowerPC traditionally - all the new chips are ARM based. 
+    - Servers: Intel is king, everything runs on x86. ARM is trying to go after this power efficiency. 
+    - IoT: ARM dominates this market. (cortex-m processors). 
+
+
