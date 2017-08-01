@@ -1,0 +1,5 @@
+operating systems have to fulfill two objectives: 
+- interact with low level hardware servicing all low level programmable elements 
+- provide an execution environment where applications can run on a computer system. 
+
+
