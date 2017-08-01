@@ -1,0 +1,9 @@
+They support multithreaded applications user programs having many relatively independent execution flows sharing a large portion of the application data structures. In such systems, a process is composed of several user threads (or simply threads), each of which represents an execution flow of the process. Nowadays, most multithreaded applications are written using standard sets of library functions called pthread (POSIX thread) libraries.
+
+Linux has a unique implementation of threads: It does not differentiate between threads and processes.To Linux, a thread is just a special kind of process.
+
+process descriptor and task list 
+
+The kernel stores the list of processes in a circular doubly linked list called the task list.2 Each element in the task list is a process descriptor of the type struct task_struct, which is defined in <linux/sched.h>.The process descriptor contains all the information about a specific process.
+
+
